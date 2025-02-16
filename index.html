@@ -2,64 +2,198 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio - Introduction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>John Doe | Frontend Developer</title>
   <style>
-    /* Basic reset and styling */
-    body {
+    /* ========== Reset some default styles ========== */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      /* Background gradient similar to your reference */
+      background: linear-gradient(120deg, #ff8b00, #ffc107);
+      color: #333;
+    }
+
+    /* ========== Header & Navigation ========== */
+    header {
+      background-color: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li {
+      display: inline-block;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ff8b00;
+    }
+
+    /* ========== Hero Section ========== */
+    .hero {
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-    }
-    
-    .container {
-      background: #fff;
-      padding: 50px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      min-height: calc(100vh - 60px); /* fill screen minus header */
       text-align: center;
-      max-width: 600px;
-      margin: 20px;
-    }
-    
-    h1 {
-      margin-bottom: 20px;
-      font-size: 2.5rem;
-    }
-    
-    p {
-      color: #666;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-    
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #007BFF;
       color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background 0.3s ease;
+      padding: 40px 20px;
     }
-    
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #fff;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    h1 span {
+      color: #fff; /* Emphasize the name in white */
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #333;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
     .btn:hover {
-      background: #0056b3;
+      background-color: #f4f4f4;
+    }
+
+    /* ========== Responsive Design ========== */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* Hide nav links on smaller screens for simplicity */
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      /* 
+         You could add a hamburger menu icon here if you want 
+         to toggle the nav-links on mobile.
+      */
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Hi, I'm Marian John</h1>
-    <p>
-      Welcome to my portfolio! I'm a [Your Profession, e.g., web developer, designer, etc.]. I specialize in creating engaging, user-friendly digital experiences.
-    </p>
-    <a href="#about" class="btn">Learn More About Me</a>
-  </div>
+  <!-- ========== Header & Navigation ========== -->
+  <header>
+    <nav>
+      <div class="logo">John Doe</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== Hero Section ========== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="profile-pic">
+        <!-- Replace with your own profile image URL -->
+        <img 
+          src="https://via.placeholder.com/150" 
+          alt="John Doe Profile Picture" 
+        />
+      </div>
+      <h1>Hello, I'm <span>John Doe</span></h1>
+      <p>Frontend Developer</p>
+      <div class="buttons">
+        <a href="#" class="btn">Download CV</a>
+        <a href="#" class="btn">Contact Info</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Optional Additional Sections ========== -->
+  <!-- 
+    You can create more sections (About, Experience, Projects, Contact)
+    by adding <section> tags below. Example:
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Brief bio or introduction...</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <p>Details about your past jobs or notable projects...</p>
+    </section>
+
+    ... and so on.
+  -->
+
 </body>
 </html>
+
