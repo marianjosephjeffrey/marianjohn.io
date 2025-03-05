@@ -197,6 +197,26 @@ body {
     color: #82b1ff;
 }
 
+#projects-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 100%;
+    justify-content: center;
+}
+
+/* Ensure the projects use the same card styling */
+#project-cards .card {
+    cursor: pointer;
+}
+
 /* ✅ Footer */
 footer {
     background: rgba(242, 242, 242, 0.8);
