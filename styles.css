@@ -9,65 +9,49 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* ✅ Meta-Style Top Bar (Fixed Header) */
-header {
-    background: rgba(255, 255, 255, 0.9); /* Brighter background */
-    color: #333;
-    padding: 12px 20px;
+/* Make header bigger and style it */
+.topbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #ddd; /* Softer border */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    justify-content: space-between;
+    padding: 20px 40px; /* Increased padding for a bigger header */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ✅ Meta Logo */
+/* Logo styling */
 .logo img {
-    height: 30px;
+    height: 60px; /* Increased size for a bigger header */
 }
 
-/* ✅ Navigation Menu (Fix Bullets & Alignment) */
+/* Navigation styles */
 .nav-links ul {
-    display: flex; /* Makes links horizontal */
-    list-style: none; /* Removes bullet points */
+    list-style: none;
+    display: flex;
     gap: 20px;
     margin: 0;
     padding: 0;
-    align-items: center;
 }
 
-/* ✅ Navigation Links */
+/* Style the links */
+.nav-links ul li {
+    display: inline;
+}
+
 .nav-links ul li a {
     text-decoration: none;
-    color: #1c1e21; /* Meta dark gray */
-    font-size: 1em;
+    color: #333; /* Dark text color */
+    font-size: 18px; /* Increase font size */
     font-weight: bold;
     padding: 10px 15px;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease-in-out;
 }
 
-/* ✅ Fix Hover Effect */
+/* Hover effect */
 .nav-links ul li a:hover {
-    color: #007bff; /* Meta blue */
+    color: #007bff; /* Change color on hover */
 }
 
-/* ✅ Dropdown Arrow Styling */
-.nav-links ul li a::after {
-    content: " ▾"; /* Dropdown arrow */
-    font-size: 0.8em;
-    color: inherit;
-}
-
-/* ✅ Remove Dropdown Arrow for Single Links */
-.nav-links ul li:nth-child(3) a::after {
-    content: ""; /* Remove dropdown from "The Metaverse" */
-}
 
 /* ✅ Mobile-Friendly Navigation */
 @media (max-width: 768px) {
