@@ -4,107 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
-    
-    <!-- Swiper CSS for Carousel -->
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    
-    <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
 
-        h1 {
-            margin-top: 20px;
-            font-size: 32px;
-        }
-
-        /* Swiper Container */
-        .swiper-container {
-            width: 80%;
-            max-width: 1000px;
-            height: 450px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Swiper Slide */
-        .swiper-slide {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-slide img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .project-details {
-            margin-top: 10px;
-        }
-
-        .project-details h2 {
-            font-size: 22px;
-            margin-bottom: 5px;
-        }
-
-        .project-details p {
-            font-size: 16px;
-            color: #555;
-        }
-
-        .project-details a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 15px;
-            background: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .project-details a:hover {
-            background: #0056b3;
-        }
-
-        /* Swiper Navigation Buttons */
-        .swiper-button-next, .swiper-button-prev {
-            color: #007bff;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script> <!-- Load header & footer dynamically -->
 </head>
 <body>
 
+    <!-- Dynamic Header -->
+    <div id="header-container"></div>
+
     <h1>My Projects</h1>
 
-    <!-- Swiper Carousel Container -->
+    <!-- Swiper Carousel -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-
-            <!-- Project 1 -->
             <div class="swiper-slide">
                 <img src="project1.jpg" alt="Project 1">
                 <div class="project-details">
                     <h2>Project 1</h2>
                     <p>A short description of Project 1.</p>
-                    <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+                    <a href="https://github.com/yourusername/project1" target="_blank">GitHub</a>
                 </div>
             </div>
 
-            <!-- Project 2 -->
             <div class="swiper-slide">
                 <img src="project2.jpg" alt="Project 2">
                 <div class="project-details">
@@ -113,25 +37,17 @@
                     <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
                 </div>
             </div>
-
-            <!-- Project 3 -->
-            <div class="swiper-slide">
-                <img src="project3.jpg" alt="Project 3">
-                <div class="project-details">
-                    <h2>Project 3</h2>
-                    <p>A short description of Project 3.</p>
-                    <a href="https://github.com/yourusername/project3" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-
         </div>
 
-        <!-- Navigation Buttons -->
+        <!-- Navigation -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
 
-    <!-- SwiperJS (for the carousel functionality) -->
+    <!-- Dynamic Footer -->
+    <div id="footer-container"></div>
+
+    <!-- SwiperJS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
@@ -143,7 +59,7 @@
                 prevEl: ".swiper-button-prev",
             },
             autoplay: {
-                delay: 3000, // Auto slide every 3 seconds
+                delay: 3000,
                 disableOnInteraction: false,
             },
         });
