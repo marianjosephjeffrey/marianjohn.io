@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
+    
+    <!-- Link to External Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,57 +13,23 @@
     <!-- Dynamic Header -->
     <div id="header-container"></div>
 
-    <h1>My Projects</h1>
-
-    <!-- Swiper Carousel -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="project1.jpg" alt="Project 1">
-                <div class="project-details">
-                    <h2>Project 1</h2>
-                    <p>A short description of Project 1.</p>
-                    <a href="https://github.com/yourusername/project1" target="_blank">GitHub</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <img src="project2.jpg" alt="Project 2">
-                <div class="project-details">
-                    <h2>Project 2</h2>
-                    <p>A short description of Project 2.</p>
-                    <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
-                </div>
+    <div class="container">
+        <h1>My Projects</h1>
+        <div id="projects-section">
+            <div id="project-cards">
+                <!-- Projects will be loaded dynamically using JavaScript -->
             </div>
         </div>
-
-        <!-- Navigation -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
     </div>
 
     <!-- Dynamic Footer -->
     <div id="footer-container"></div>
 
-    <!-- SwiperJS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Load Header & Footer -->
+    <script src="script.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".swiper-container", {
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-        });
-    </script>
-    
-    <script defer src="script.js"></script> <!-- Load header & footer dynamically -->
+    <!-- Load Projects Data -->
+    <script src="projects.js"></script>
 
 </body>
 </html>
